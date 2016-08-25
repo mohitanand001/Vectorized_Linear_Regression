@@ -13,7 +13,8 @@ def cost_now(x,y,theta,numofpoints):
 def gradient_descent(x,y,theta,alpha,numofpoints,total_iterations):
 	xtr=x.transpose()
 	for i in range(total_iterations):
-		# we use dot operation so that there is matrix multiplication between x and theta
+		# we use dot operation so that there is matrix multiplication between x(shape=(100,2)) and 
+		# theta(shape=(2,))
 		# which are numpy arrays. simply using a '*' will not produce the desired results
 		hypothesis=np.dot(x,theta)
 		error=hypothesis-y		
